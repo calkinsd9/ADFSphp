@@ -9,6 +9,10 @@
 #define('PF_ADAPTERID', "AllianceReferenceAdapter");
 #define('PF_AUTH', "BDORestUser:BDO_Rest_User");
 
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+require_once(__DIR__.'/lightSAML/autoload.php');
+
 global $user;
 
 session_start();
