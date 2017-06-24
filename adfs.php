@@ -11,7 +11,45 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once(__DIR__.'/lightSAML/autoload.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Binding/BindingFactory.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/ClaimTypes.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Context/Profile/MessageContext.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Credential/KeyHelper.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Credential/X509Certificate.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Helper.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/Assertion.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/AttributeStatement.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/Attribute.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/AudienceRestriction.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/AuthnContext.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/Conditions.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/Issuer.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/NameID.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/Subject.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/SubjectConfirmation.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Assertion/SubjectConfirmationData.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Protocol/Response.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Protocol/Status.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/Protocol/StatusCode.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/Model/XmlDSig/SignatureWriter.php');
+require_once(__DIR__.'lightSAML/src/LightSaml/SamlConstants.php');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 global $user;
 
