@@ -13,7 +13,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
+    $class_name = str_replace('\\', '/', $class_name);
+    include_once dirname(__FILE__).'/lightSAML/src/'.$class_name.'.php';
 });
 
 
