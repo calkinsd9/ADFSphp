@@ -185,8 +185,8 @@ function processSSO() {
     //BUILD SAML RESPONSE
     $destination = "https://authdev.bdo.com/adfs/ls";
     $issuer = "bdo:saml2:php:dev";
-    $cert = "/ADFSphpCert.pem";  //cert file location
-    $key = "/ADFSphpKey.pem";  //name of the private key
+    $cert = __DIR__."/ADFSphpCert.pem";  //cert file location
+    $key = __DIR__."/ADFSphpKey.pem";  //name of the private key
 
     $certificate = \LightSaml\Credential\X509Certificate::fromFile($cert);
     $privateKey = \LightSaml\Credential\KeyHelper::createPrivateKey($key, 'ADFSphp', true);
@@ -228,7 +228,7 @@ function processSSO() {
                     ->setNotBefore(new \DateTime())
                     ->setNotOnOrAfter(new \DateTime('+1 MINUTE'))
                     ->addItem(
-                        new \LightSaml\Model\Assertion\AudienceRestriction([$destination])
+                        new \LightSaml\Model\Assertion\AudienceRestriction(['http://authdev.bdo.com/adfs/services/trust'])
                     )
             )
         ->addItem(
